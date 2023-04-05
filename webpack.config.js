@@ -19,7 +19,7 @@ const plugins = ( argv ) => [
 ];
 
 module.exports = ( env, argv ) => ({
-    mode: 'development',
+    mode: 'production',
     entry: [JS_DIR + '/app.js', SASS_DIR + '/app.scss'],
     module: {
         rules: [
