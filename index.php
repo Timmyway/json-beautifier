@@ -13,7 +13,7 @@
 			<div class="viewer-grid__source">
 				<textarea class="form-control viewer" placeholder="Enter raw JSON here..." v-model="jsonString"></textarea>				
 			</div>
-			<div class="viewer-grid__result">				
+			<div class="viewer-grid__preview">				
 				<div class="viewer" v-show="beautified">					
 					<button class="btn-copy" @click="copyToClipboard(beautified)">{{ copied ? 'Copied' : 'Copy' }}</button>
 					<pre><code class="language-json" v-html="beautified"></code></pre>
