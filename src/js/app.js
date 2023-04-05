@@ -4,7 +4,7 @@ import 'prismjs/components/prism-json'; // import JSON language support
 
 const app = createApp({			
     setup() {
-        const jsonString = ref('test');
+        const jsonString = ref('');
         // Beautify JSON function
         const beautified = computed(() => {
             try {
