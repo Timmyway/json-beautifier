@@ -8,10 +8,14 @@
 </head>
 <body>
 	<div id="app" class="container-fluid">
-		<h1 class="heading">JSON beautifier</h1>
+		<h1 class="text-4xl font-bold text-red-600">JSON beautifier</h1>
 		<div class="viewer-grid">						
 			<div class="viewer-grid__source">
-				<textarea class="form-control viewer viewer--source" placeholder="Enter raw JSON here..." v-model="jsonString"></textarea>				
+				<textarea
+					class="border border-red-400 border-solid viewer viewer--source"
+					placeholder="Enter raw JSON string here..."
+					v-model="jsonString"
+					></textarea>				
 			</div>
 			<div class="viewer-grid__preview">				
 				<div class="viewer viewer--preview" v-show="beautified">					

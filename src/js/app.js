@@ -9,7 +9,7 @@ const app = createApp({
         const beautified = computed(() => {
             try {
                 const parsedData = JSON.parse(jsonString.value);
-                return highlightJson(JSON.stringify(parsedData, null, 2));
+                return highlightJson(JSON.stringify(parsedData, null, 4));
             } catch (error) {                
                 return jsonString.value;
             }
@@ -17,8 +17,8 @@ const app = createApp({
         const copied = ref(false);
 
         // Highlight JSON function
-        function highlightJson(jsonString) {
-            const escapedString = jsonString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); // escape HTML characters
+        function highlightJson(jsonStr) {
+            const escapedString = jsonStr.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); // escape HTML characters
 
             const highlightedString = Prism.highlight(escapedString, Prism.languages.json, 'json');
 

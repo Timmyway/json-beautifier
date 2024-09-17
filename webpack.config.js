@@ -31,14 +31,8 @@ module.exports = ( env, argv ) => ({
             {
                 test: /\.css$/,
                 use: [
-                    // creates style nodes from JS strings (for development)
-                    'style-loader',
-                    // translates CSS into CommonJS (for development)
+                    'vue-style-loader',
                     'css-loader',
-                    // extracts CSS into separate files (for production)
-                    MiniCssExtractPlugin.loader,
-                    // post-processes CSS with Autoprefixer (for production)
-                    'postcss-loader',
                 ],
             },
             // handle SCSS files
@@ -49,8 +43,9 @@ module.exports = ( env, argv ) => ({
                     MiniCssExtractPlugin.loader,
                     // translates CSS into CommonJS
                     'css-loader',
+                    'postcss-loader',
                     // compiles Sass to CSS
-                    'sass-loader',
+                    'sass-loader',                    
                 ],
             },
         ],
